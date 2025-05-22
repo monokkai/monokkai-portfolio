@@ -1,3 +1,4 @@
+import React from "react";
 import Logo from "./logo";
 import NextLink from "next/link";
 import {
@@ -17,12 +18,13 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
+import { useRouter } from "next/router";
+import useTranslation from 'next-translate/useTranslation';
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
-  const inactiveColor = "whiteAlpha.900";
-
+  const inactiveColor = useColorModeValue("gray.800", "whiteAlpha.900");
   return (
     <Link
       as={NextLink}
@@ -39,8 +41,14 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
   );
 };
 
+const MenuLink = React.forwardRef((props, ref) => (
+  <Link ref={ref} as={NextLink} {...props} />
+));
+MenuLink.displayName = "MenuLink";
+
 const Navbar = (props) => {
   const { path } = props;
+  const { t } = useTranslation('common');
 
   return (
     <Box
@@ -75,11 +83,11 @@ const Navbar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            Works
+            {t('works')}
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/monokkai/monokkai-portfolio"
+            href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -87,11 +95,11 @@ const Navbar = (props) => {
             pl={2}
           ></LinkItem>
           <LinkItem href="/tools" path={path}>
-            Tools
+            {t('tools')}
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/monokkai/monokkai-portfolio"
+            href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -104,7 +112,6 @@ const Navbar = (props) => {
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
-
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
@@ -114,28 +121,19 @@ const Navbar = (props) => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem>
-                  <NextLink href="/" passHref legacyBehavior>
-                    <Link sx={{ color: "whiteAlpha.900" }}>About</Link>
-                  </NextLink>
+                <MenuItem as={MenuLink} href="/">
+                  {t('about')}
                 </MenuItem>
-                <MenuItem>
-                  <NextLink href="/works" passHref legacyBehavior>
-                    <Link sx={{ color: "whiteAlpha.900" }}>Works</Link>
-                  </NextLink>
+                <MenuItem as={MenuLink} href="/works">
+                  {t('works')}
                 </MenuItem>
-                <MenuItem>
-                  <NextLink href="/tools" passHref legacyBehavior>
-                    <Link sx={{ color: "whiteAlpha.900" }}>Tools</Link>
-                  </NextLink>
+                <MenuItem as={MenuLink} href="/tools">
+                  {t('tools')}
                 </MenuItem>
 
                 <MenuItem
                   as={Link}
-                  href="https://github.com/monokkai/monokkai-portfolio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{ color: "whiteAlpha.900" }}
+                  href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
                 >
                   <FaGithub />
                   <Text ml={1}>View Source</Text>
