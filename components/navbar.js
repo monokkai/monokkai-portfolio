@@ -79,7 +79,7 @@ const Navbar = (props) => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
+            href="https://github.com/monokkai/monokkai-portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -91,7 +91,7 @@ const Navbar = (props) => {
           </LinkItem>
           <LinkItem
             target="_blank"
-            href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
+            href="https://github.com/monokkai/monokkai-portfolio"
             path={path}
             display="inline-flex"
             alignItems="center"
@@ -132,7 +132,7 @@ const Navbar = (props) => {
 
                 <MenuItem
                   as={Link}
-                  href="https://github.com/monokkai/CURRENT-PORTFOLIO-SITE"
+                  href="https://github.com/monokkai/monokkai-portfolio"
                   target="_blank"
                   rel="noopener noreferrer"
                   sx={{ color: "whiteAlpha.900" }}
