@@ -18,8 +18,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
-import { FaGithub, FaGlobe } from "react-icons/fa";
-import { useRouter } from "next/router";
+import { FaGithub } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
