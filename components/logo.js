@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Text, useColorModeValue } from "@chakra-ui/react";
-import styled from "@emotion/styled";
-import FootprintIcon from "../images/footprint";
+import Link from 'next/link'
+import { Text, useColorModeValue } from '@chakra-ui/react'
+import styled from '@emotion/styled'
+import FootprintIcon from '../images/footprint'
 
 const LogoBox = styled.span`
   font-weight: bold;
@@ -19,24 +19,24 @@ const LogoBox = styled.span`
   &:hover > svg {
     transform: rotate(20deg);
   }
-`;
+`
 
 const Logo = () => {
   return (
-    <a href="/" scroll={false}>
+    <Link href="/" passHref>
       <LogoBox>
         <FootprintIcon />
         <Text
-          color={useColorModeValue("gray.800", "whiteAlpha.900")}
-          fontFamily='M PLUS Rounded 1c", sans-serif'
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          fontFamily='M PLUS Rounded 1c'
           fontWeight="bold"
           ml={3}
         >
           Egor Mayer
         </Text>
       </LogoBox>
-    </a>
-  );
-};
+    </Link>
+  )
+}
 
-export default Logo;
+export default Logo

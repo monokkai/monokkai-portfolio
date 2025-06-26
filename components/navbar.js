@@ -20,7 +20,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./theme-toggle-button";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import { useRouter } from "next/router";
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from "next-translate/useTranslation";
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href;
@@ -48,7 +48,7 @@ MenuLink.displayName = "MenuLink";
 
 const Navbar = (props) => {
   const { path } = props;
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
 
   return (
     <Box
@@ -83,7 +83,7 @@ const Navbar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/works" path={path}>
-            {t('works')}
+            {t("Works")}
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -95,7 +95,7 @@ const Navbar = (props) => {
             pl={2}
           ></LinkItem>
           <LinkItem href="/tools" path={path}>
-            {t('tools')}
+            {t("Tools")}
           </LinkItem>
           <LinkItem
             target="_blank"
@@ -122,13 +122,13 @@ const Navbar = (props) => {
               />
               <MenuList>
                 <MenuItem as={MenuLink} href="/">
-                  {t('about')}
+                  {t("About")}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/works">
-                  {t('works')}
+                  {t("Works")}
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/tools">
-                  {t('tools')}
+                  {t("Tools")}
                 </MenuItem>
 
                 <MenuItem
