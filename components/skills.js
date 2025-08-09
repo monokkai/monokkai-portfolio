@@ -6,16 +6,16 @@ const Skills = () => {
   return (
     <Tabs variant="soft-rounded" colorScheme="teal" mt={5}>
       <TabList>
-        <Tab>WEB</Tab>
         <Tab>DEVOPS</Tab>
+        <Tab>WEB</Tab>
         <Tab>VIDEO</Tab>
       </TabList>
       <TabPanels>
         <TabPanel>
-          <SkillsTable skills={skillsData.webDev} />
+          <SkillsTable skills={skillsData.devops} />
         </TabPanel>
         <TabPanel>
-          <SkillsTable skills={skillsData.devops} />
+          <SkillsTable skills={skillsData.webDev} />
         </TabPanel>
         <TabPanel>
           <SkillsTable skills={skillsData.video} />
