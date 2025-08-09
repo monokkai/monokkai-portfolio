@@ -24,6 +24,14 @@ const worksData = {
       description:
         "The full-stack fitness site project, built with Next.js, TypeScript, and Chakra UI. Based on microserfices achitecture. It features a responsive design, user authentication, and a RESTful API for managing workouts and nutrition plans. The project is designed to provide a seamless user experience across devices. To see all of the microservices you can visit my GitHub.",
     },
+    {
+      href: "https://github.com/monokkai/DevSecOps-RESTAPI",
+      imgSrc: "/images/restapi.png",
+      imgAlt: "DevSecOps REST API thumbnail",
+      title: "DevSecOps REST API",
+      description:
+        "Special REST API for DevSecOps project. It has a lot of methods for managing databases and etc. Practice with JWT, tokens and secured sessions.",
+    },
   ],
   oldWorks: [
     {
