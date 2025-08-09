@@ -6,7 +6,7 @@ const worksData = {
       imgAlt: "DevOps CLI tool thumbnail",
       title: "DevOps CLI tool",
       description:
-        "New DevOps CLI tool for managing Kubernetes clusters, Docker containers, and cloud resources. Features include cluster management, container orchestration, pushing to git repository and cloud service integration.  **Now it's on the stage of developing**",
+        "New DevOps CLI tool for managing Kubernetes clusters, Docker containers, and cloud resources. Features include cluster management, container orchestration, pushing to git repository and cloud service integration. **Now it's on the stage of developing**",
     },
     {
       href: "https://github.com/monokkai/Final-NestJS-Project",
@@ -15,6 +15,14 @@ const worksData = {
       title: "Microservices with Nest.js",
       description:
         "A comprehensive microservices project built with NestJS, featuring multiple services including API Gateway, Chat Service, Orders Service, Products Service, Reviews Service, Security Service, and Users Service. Implemented with Docker, NGINX, and following microservices best practices.",
+    },
+    {
+      href: "https://github.com/monokkai/Fitness-Site-Front",
+      imgSrc: "/images/fitness-site.png",
+      imgAlt: "Fitness Site thumbnail",
+      title: "Fitness Site",
+      description:
+        "The full-stack fitness site project, built with Next.js, TypeScript, and Chakra UI. Based on microserfices achitecture. It features a responsive design, user authentication, and a RESTful API for managing workouts and nutrition plans. The project is designed to provide a seamless user experience across devices. To see all of the microservices you can visit my GitHub.",
     },
   ],
   oldWorks: [
